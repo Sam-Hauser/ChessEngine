@@ -1,0 +1,4 @@
+/Users/samhauser/Desktop/Chess/ChessEngine/build/CMakeFiles/rebuild_cache.dir
+/Users/samhauser/Desktop/Chess/ChessEngine/build/CMakeFiles/edit_cache.dir
+/Users/samhauser/Desktop/Chess/ChessEngine/build/CMakeFiles/Chess.dir
+/Users/samhauser/Desktop/Chess/ChessEngine/build/CMakeFiles/board.dir

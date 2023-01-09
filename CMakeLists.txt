@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.19.4)
 project(Chess)
-set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD 11)
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 include_directories(board)
