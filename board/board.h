@@ -45,6 +45,7 @@ private:
     bool isWhite(int startingfile,int startingrank);
 public:
     Board();
+    std::string getTurn();
     void printBoard();
     void move(std::string);
     bool checkLegalMove(std::string move);

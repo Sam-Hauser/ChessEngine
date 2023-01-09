@@ -5,11 +5,12 @@ int main(){
     board.printBoard();
     while(true){
         std::string move;
+        std::cout<<"Enter a move for "<< board.getTurn()<<": ";
         std::cin>>move;
         try{
-        if(board.checkLegalMove(move)){
-            board.move(move);
-            board.printBoard();
+            if(board.checkLegalMove(move)){
+                board.move(move);
+                board.printBoard();
         }
             else{
                 std::cout<<"Not a leagal move"<<std::endl;

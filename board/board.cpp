@@ -80,17 +80,29 @@ bool Board::checkWhitePawnMove(int startingfile,int endingfile,int startingrank,
         }
     }
     else if(endingfile==startingfile+1||endingfile==startingfile-1){
-        return false;
-    
-    
+        if(endingrank==startingrank+1){
+            try{
+                return !isWhite(endingrank,endingfile);
+            }
+            catch(std::runtime_error error){
+                return false;
+            }
+        }
+            
+        else{
+            return true;
+        }
     }
         
     else{
         return false;
     }
 }
-bool Board::isWhite(int startingrank,int startingfile){
-    return !islower(board[startingrank][startingfile]);
+bool Board::isWhite(int rank,int file){
+    if(board[rank][file]=='0'){
+        throw std::runtime_error("Error Not a piece");
+    }
+    return !islower(board[rank][file]);
 }
 int Board::fileToIndex(char file){
     switch (file)
@@ -122,5 +134,13 @@ int Board::fileToIndex(char file){
     default:
         return -1;//TODO proper error handling
         break;
+    }
+}
+std::string Board::getTurn(){
+    if(isWhiteTurn){
+        return "White";
+    }
+    else{
+        return "Black";
     }
 }
